@@ -1,9 +1,13 @@
+function addPlayer(){
+  players[players.length] = document.getElementById('input').value
+  printPlayers(players)
+  document.getElementById('input').value = ''
+}
+
 function printPlayers(players){
-  let phrase = ''
-  for (let i = 0; i < players.length; i++) {
-    phrase += `\n - ${players[i]}`
-  }
-  return phrase
+  let player = document.createElement('li')
+  player.innerHTML = `\n - ${players[players.length - 1]}`
+  document.getElementById('players').appendChild(player)
 }
 
 function randomizePlayers(players){
@@ -17,7 +21,7 @@ function randomizePlayers(players){
 }
 
 function printKeys(players){
-  let ul = document.getElementById("ul")
+  let ul = document.getElementById("keys")
   for (let i = 0; i < players.length; i = i + 2) {
     let li = document.createElement("li")
     li.innerHTML = `${players[i]} vs ${players[i + 1]}\n`
@@ -25,20 +29,28 @@ function printKeys(players){
   }
 }
 
-let choice = ''
-let players = []
 
-while(choice != 0 || choice == null || choice == ''){
-  choice = prompt(`Digite o nome do participante\n
-0 - Finalizar\n\nJogadores Cadastrados:${printPlayers(players)}\n`)
-  if(choice == 0){
-    break
-  } else if (choice == null || choice == '' || typeof choice == 'null' || typeof choice == null) {
-    alert("Opção Inválida!")
-  } else if (typeof choice === 'string'){
-    players[players.length] = choice
-  } 
+function prizeDraw(){
+  clearKeys()
+  randomizePlayers(players)
+  printKeys(players)
+  clearPlayers()
+  players = []
 }
 
-randomizePlayers(players)
-printKeys(players)
+function clearPlayers() {
+  const ul = document.getElementById("players")
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild)
+  }
+}
+
+function clearKeys(){
+  const ul = document.getElementById("keys")
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild)
+  }
+}
+
+let choice = ''
+var players = []
