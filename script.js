@@ -35,7 +35,6 @@ while(choice != 0 || choice == null || choice == ''){
     break
   } else if (choice == null || choice == '' || typeof choice == 'null' || typeof choice == null) {
     alert("Opção Inválida!")
-    break
   } else if (typeof choice === 'string'){
     players[players.length] = choice
   } 
