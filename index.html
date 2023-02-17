@@ -9,13 +9,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Sorteio do Preto</h1>
-  <hr>
   <br>
+  <h1>Sorteio do Preto</h1>
+  <br>
+  <h3>Jogadores</h3>
+  <label for="input">Novo Jogador:</label><input type="text" id="input"><button onclick="addPlayer()">Adicionar à Competição</button>
+  <br>
+  <section>
+    <ul id="players">
+
+    </ul>
+  </section>
+  <button onclick="prizeDraw()">Sortear as chaves</button>
+  <hr><br>
   <h2>Chaveamento</h2>
   <br>
   <section>
-    <ul id="ul"></ul>
+    <ul id="keys">
+
+    </ul>
   </section>
 </body>
 </html>
