@@ -1,0 +1,16 @@
+body{
+  background-color: #232323;
+  color: aliceblue;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  font-size: larger;
+}
+
+ul{
+  padding-right: 0;
+}
