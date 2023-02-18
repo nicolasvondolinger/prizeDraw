@@ -14,3 +14,46 @@ li {
 ul{
   padding-right: 0;
 }
+
+.input label {
+  padding: .5rem;
+  font-size: 13px;
+}
+
+button {
+  margin-left: 1rem;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  background-color: aliceblue;
+  color: #232323;
+  font-size: 14px;
+  transition: .4s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: aliceblue;
+  border-color: #A4F5B4;
+}
+
+.input input {
+  background-color: transparent;
+  color: aliceblue;
+  font-size: 14px;
+  border-radius: 6px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  border: 2px solid #dee1e2;
+  background: aliceblue;
+  height: 16px;
+}
+
+.input input:hover {
+  border: 2px solid #A4F5B4;
+}
+.input input:focus{
+  border-color: #A4F5B4;
+  background: transparent;
+}
